@@ -13,7 +13,6 @@ import ContactsOutlined from "@mui/icons-material/ContactsOutlined";
 import ToggleMode from "app/components/ToggleMode/ToggleMode";
 
 const Login = () => {
-	const theme = useTheme();
 
 	return (
 		<Paper
@@ -24,7 +23,6 @@ const Login = () => {
 				alignItems: "center",
 			}}
 			square
-			variant="elevation"
 			elevation={0}
 		>
 			<Container maxWidth="xs" component="main">
