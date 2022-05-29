@@ -10,3 +10,11 @@
   - https://dribbble.com/shots/17295056-Forms
 - Colors
   - https://www.behance.net/gallery/136850165/Procurement-management-for-hotel-business?tracking_source=search_projects%7Cdashboard%20web%20design
+
+
+
+### Features
+- Chat
+- Teams contacts
+- people
+- Login / Register
