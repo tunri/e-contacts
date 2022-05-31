@@ -1,14 +1,12 @@
-// import { useMemo } from "react";
+import { useMemo } from "react";
+import { createTheme } from "@mui/material/styles";
+import { PaletteMode } from "@mui/material";
 
-// import { createTheme } from "@mui/material/styles";
+// options ThemeOptions
+import getTheme from "./ThemeOptions";
 
-const Theme = {
-	palette: {
-		mode: "dark",
-		primary: {
-			main: "blue",
-		},
-	},
+const memoCreateTheme = (mode: PaletteMode) => {
+	return useMemo(() => createTheme(getTheme(mode)), [mode]);
 };
 
-export default Theme;
+export default memoCreateTheme;

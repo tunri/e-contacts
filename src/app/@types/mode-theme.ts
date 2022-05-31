@@ -1,4 +1,6 @@
-export const LIGHT: string = "light";
-export const DARK: string = "dark";
+import { PaletteMode } from "@mui/material";
+
+export const LIGHT: PaletteMode = "light";
+export const DARK: PaletteMode = "dark";
 
 export type MODE = typeof LIGHT | typeof DARK;

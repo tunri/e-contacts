@@ -16,7 +16,7 @@ const FormLogin = () => {
 				<Typography variant="h6" component="h3" mb={1}>
 					Welcome Back !
 				</Typography>
-				<Typography variant="body2" color="#A1A1A1">
+				<Typography variant="body2">
 					Become a member - you'll enjoy exclusive deals, offers,
 					invites and rewards
 				</Typography>
@@ -42,24 +42,19 @@ const FormLogin = () => {
 						sx={{
 							height: 48,
 							mt: 3,
-							bgcolor: "#FFd831",
-							color: "#333",
 							fontWeight: "bold",
 						}}
 					>
 						Log in
 					</Button>
 					<Divider light sx={{ mt: 3, mb: 2 }} />
-					<Typography
-						variant="body2"
-						color="#A1A1A1"
-						sx={{ textAlign: "center" }}
-					>
+					<Typography variant="body2" sx={{ textAlign: "center" }}>
 						Don't have an account?{" "}
 						<Link
 							href="#"
 							underline="hover"
-							sx={{ fontWeight: "bold", color: "primary.main" }}
+							color={(theme) => theme.global.wheel}
+							sx={{ fontWeight: "bold" }}
 						>
 							Sign up
 						</Link>

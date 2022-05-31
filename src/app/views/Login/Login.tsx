@@ -13,7 +13,6 @@ import ContactsOutlined from "@mui/icons-material/ContactsOutlined";
 import ToggleMode from "app/components/ToggleMode/ToggleMode";
 
 const Login = () => {
-
 	return (
 		<Paper
 			sx={{
@@ -21,6 +20,7 @@ const Login = () => {
 				minHeight: "580px",
 				display: "flex",
 				alignItems: "center",
+				backgroundColor: 'backdrop.main',
 			}}
 			square
 			elevation={0}
@@ -43,8 +43,10 @@ const Login = () => {
 						spacing={2}
 						mb={3}
 					>
-						<Avatar sx={{ backgroundColor: "#1C212D" }}>
-							<ContactsOutlined sx={{ color: "#FFd831" }} />
+						{/* sx={{ backgroundColor: "#1C212D" }} */}
+						<Avatar>
+							{/* sx={{ color: "#FFd831" }} */}
+							<ContactsOutlined />
 						</Avatar>
 						<Typography component="h1" variant="h5">
 							E-Contacts

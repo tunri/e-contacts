@@ -4,6 +4,6 @@ interface ContextProps {
 	toggleTheme: () => void;
 }
 
-const AppContext = createContext({ toggleColorMode: () => {} });
+const AppContext = createContext({} as ContextProps);
 
 export default AppContext;

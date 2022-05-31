@@ -1,5 +1,4 @@
-import { MODE, LIGHT, DARK } from "app/@types/mode-theme";
-
+import { useContext } from "react";
 import { useTheme } from "@mui/material/styles";
 
 import Button from "@mui/material/Button";
@@ -8,38 +7,35 @@ import Typography from "@mui/material/Typography";
 // assets
 import IconLightMode from "@mui/icons-material/LightMode";
 import IconDarkMode from "@mui/icons-material/DarkMode";
-import useMode from "app/hooks/useMode";
-import { useContext } from "react";
 import AppContext from "app/context/AppContext";
 
-interface Props {
-	mode?: MODE;
-}
+import { LIGHT } from "app/@types/mode-theme";
 
-const ToggleMode = ({ mode = LIGHT }: Props) => {
-	// const { toggleMode, isLight } = useMode(mode);
-	const theme = useTheme();
-	const { toggleColorMode } = useContext(AppContext);
+const ToggleMode = () => {
+	const {
+		palette: { mode },
+	} = useTheme();
+	const { toggleTheme } = useContext(AppContext);
 
-	const isLight = theme.palette.mode === "light";
+	const isLight = mode === LIGHT;
 
 	return (
-		<Button onClick={toggleColorMode} size="large">
+		<Button onClick={toggleTheme} size="large" disableRipple>
 			<Typography
 				component="span"
 				variant="body1"
 				mr={1}
 				sx={{
 					fontWeight: "bold",
-					color: isLight ? "#1C212D" : "#FFd831",
+					color: "text.primary",
 				}}
 			>
 				{isLight ? "dark" : "light"}
 			</Typography>
 			{isLight ? (
-				<IconDarkMode sx={{ color: "#1C212D" }} />
+				<IconDarkMode sx={{ color: "text.primary" }} />
 			) : (
-				<IconLightMode sx={{ color: "#FFd831" }} />
+				<IconLightMode />
 			)}
 		</Button>
 	);
